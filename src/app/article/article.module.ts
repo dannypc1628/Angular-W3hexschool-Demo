@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArticleListComponent } from './article-list/article-list.component';
 import {DataService} from './data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -9,7 +10,8 @@ import {DataService} from './data.service';
   declarations: [ArticleListComponent],
   exports: [ArticleListComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [DataService]
 })
