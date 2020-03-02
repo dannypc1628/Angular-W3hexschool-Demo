@@ -8,10 +8,10 @@ import { DataService } from '../data.service';
 })
 export class ArticleListComponent implements OnInit {
 
-  constructor(private dataServe: DataService) { }
+  constructor(public dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataServe.run();
+    this.dataService.run();
   }
 
 }

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ArticleListComponent } from './article-list/article-list.component';
 import {DataService} from './data.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [ArticleListComponent],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserModule
   ],
   providers: [DataService]
 })

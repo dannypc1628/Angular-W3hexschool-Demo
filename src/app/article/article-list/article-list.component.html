@@ -1,3 +1,12 @@
 <div class="row">
-  in app-article-list
+  <div *ngFor="let item of dataService.data; let i=index;" class="list">
+    <span>{{i}}</span><p>{{item.name}}</p>
+    <span>{{item.blogUrl}}</span>
+    <div *ngFor="let page of item.blogList; let idx=index;" class="list">
+      <span>{{idx}}</span><p>{{page.name}}</p>
+      <span>{{page.title}}</span>
+      <span>{{page.blogUrl}}</span>
+      <img src="{{page.image}}">
+    </div>
+  </div>
 </div>

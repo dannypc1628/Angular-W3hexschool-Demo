@@ -12,9 +12,7 @@ data;
     .subscribe(result => {
       this.data = result;
       console.log(result);
-
-    }
-      )
+    });
 
   }
 
