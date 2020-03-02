@@ -11,7 +11,7 @@ export class ArticleListComponent implements OnInit {
   constructor(public dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.run();
+
   }
 
 }
