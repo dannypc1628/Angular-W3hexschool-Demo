@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-article-list',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataServe: DataService) { }
 
   ngOnInit(): void {
+    this.dataServe.run();
   }
 
 }
