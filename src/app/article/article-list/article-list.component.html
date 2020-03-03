@@ -1,6 +1,6 @@
 <div class="row">
-  <ng-container *ngFor="let item of dataService.showData; let i=index;" >
-    <ng-container *ngFor="let page of item.blogList; let idx=index;" >
+  <ng-container *ngFor="let item of dataService.showData; let i=index;">
+    <ng-container *ngFor="let page of item.blogList; let idx=index;">
       <app-article-card [item]="page" [name]="item.name" class="col-md-4"></app-article-card>
     </ng-container>
   </ng-container>
@@ -15,7 +15,8 @@
       </li>
       <li *ngFor="let num of dataService.paginArray" class="page-item" [ngClass]="{active: dataService.nowPage==num}">
         <a class="page-link" *ngIf="dataService.nowPage!==num" href="#" (click)="dataService.goPage(num)">{{num}}</a>
-        <span class="page-link" *ngIf="dataService.nowPage===num" href="#" (click)="dataService.goPage(num)">{{num}}</span>
+        <span class="page-link" *ngIf="dataService.nowPage===num" href="#"
+          (click)="dataService.goPage(num)">{{num}}</span>
       </li>
       <li class="page-item">
         <a class="page-link" href="#" aria-label="Next">
