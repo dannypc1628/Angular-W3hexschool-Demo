@@ -5,6 +5,9 @@
     <p class="card-text ">{{item.description}}</p>
   </div>
   <div class="card-footer">
-    <small class="text-muted">{{name}}</small>
+    <div class="row justify-content-between px-2">
+      <span class="text-muted mr-auto">{{name}}</span>
+      <span [ngClass]="{'text-success':item.http_status_code==200,'text-danger':item.http_status_code!=200 }">{{item.http_status_code}}</span>
+    </div>
   </div>
 </div>
